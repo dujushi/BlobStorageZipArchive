@@ -16,7 +16,6 @@ namespace BlobStorageZipArchive.Controllers
             _blobStorageZipArchiveService = blobStorageZipArchiveService;
         }
 
-        // GET api/values
         [HttpGet]
         public async Task<ActionResult<IEnumerable<string>>> Get()
         {
