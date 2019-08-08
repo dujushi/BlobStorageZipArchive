@@ -35,7 +35,7 @@ namespace BlobStorageZipArchive.Services
             }
 
             // generate zip archive stream
-            using (var zipArchive = new ZipArchive(stream, ZipArchiveMode.Create, true))
+            using (var zipArchive = new ZipArchive(stream, ZipArchiveMode.Create, leaveOpen: true))
             {
                 await AddZipArchiveEntryFromCloudBlobDirectory(cloudBlobDirectory, zipArchive);
             }
